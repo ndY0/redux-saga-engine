@@ -1,5 +1,6 @@
 import React from "react";
 import LogicEngineManager from "../../logic-engine/logic-engine-manager";
+import { Class } from "../../logic-engine/types";
 
 const wrapperFactory = ({
   Component,
@@ -7,11 +8,11 @@ const wrapperFactory = ({
   props,
   manager,
 }: {
-  Component: React.ComponentType;
+  Component: Class<JSX.ElementClass>;
   adapterList: [string, ((...args: unknown[]) => void)[]][];
   props: unknown;
   manager: LogicEngineManager;
-}) => (): React.Component => {
+}) => (): JSX.Element => {
   if (
     adapterList &&
     Array.isArray(adapterList) &&
@@ -40,11 +41,11 @@ const wrapperFactory = ({
 
 const engineConnectorFactory = (
   manager: LogicEngineManager,
-  Component: React.ComponentType,
+  Component: Class<JSX.ElementClass>,
   adapterList: [string, ((...args: unknown[]) => void)[]][],
   mapsSagaToProps: [string, (...args: unknown[]) => void][],
   props: Record<string | number | symbol, unknown>
-): (() => React.Component) => {
+): (() => JSX.Element) => {
   let extendedProps = { ...props };
   if (
     mapsSagaToProps &&
