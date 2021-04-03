@@ -15,12 +15,22 @@
     "helpers",
     "adapters",
     "connector",
-    "manager"
+    "manager",
+    "root"
   ],
   "repository": "https://github.com/ndY0/redux-saga-react-engine",
   "author": "Andy Crépin <andy1.crepin-prestataire@laposte.fr>",
   "license": "GPL-2.0-or-later",
   "private": false,
+  "keywords": [
+    "react",
+    "redux",
+    "saga",
+    "engine",
+    "provider",
+    "manager",
+    "middleware"
+  ],
   "devDependencies": {
     "@types/lodash.isequal": "^4.5.5",
     "@types/react": "^17.0.3",
