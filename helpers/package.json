@@ -1,0 +1,6 @@
+{
+  "internal": true,
+  "main": "../lib/logic-engine/helpers/index.js",
+  "module": "../lib/logic-engine/helpers/index.js",
+  "types": "../lib/logic-engine/helpers/index.d.ts"
+}

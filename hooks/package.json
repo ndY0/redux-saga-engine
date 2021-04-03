@@ -1,0 +1,6 @@
+{
+  "internal": true,
+  "main": "../lib/react-context/engine-hook/index.js",
+  "module": "../lib/react-context/engine-hook/index.js",
+  "types": "../lib/react-context/engine-hook/index.d.ts"
+}

@@ -1,0 +1,6 @@
+{
+  "internal": true,
+  "main": "../lib/logic-engine/effects/index.js",
+  "module": "../lib/logic-engine/effects/index.js",
+  "types": "../lib/logic-engine/effects/index.d.ts"
+}

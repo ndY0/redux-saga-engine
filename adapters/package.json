@@ -1,0 +1,6 @@
+{
+  "internal": true,
+  "main": "../lib/react-context/engine-connector/factories/index.js",
+  "module": "../lib/react-context/engine-connector/factories/index.js",
+  "types": "../lib/react-context/engine-connector/factories/index.d.ts"
+}
