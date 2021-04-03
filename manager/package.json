@@ -1,0 +1,6 @@
+{
+  "internal": true,
+  "main": "../lib/logic-engine/logic-engine-manager.js",
+  "module": "../lib/logic-engine/logic-engine-manager.js",
+  "types": "../lib/logic-engine/logic-engine-manager.d.ts"
+}

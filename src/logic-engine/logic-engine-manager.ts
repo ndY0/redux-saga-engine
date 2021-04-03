@@ -11,28 +11,30 @@ export default class LogicEngineManager {
   runInitExtension = new Set<{
     type: "before" | "after";
     fn: (...args: unknown[]) => unknown;
-    args: unknown[];
+    args: [LogicEngineManager, ...unknown[]];
   }>();
 
   registerExtensionBefore(
-    fn: (...args: unknown[]) => unknown,
+    fn: (engineManager: LogicEngineManager, ...args: unknown[]) => unknown,
+    engineManager: LogicEngineManager,
     ...args: unknown[]
   ): void {
     this.runInitExtension.add({
       type: "before",
       fn,
-      args,
+      args: [engineManager, ...args],
     });
   }
 
   registerExtensionAfter(
-    fn: (...args: unknown[]) => unknown,
+    fn: (engineManager: LogicEngineManager, ...args: unknown[]) => unknown,
+    engineManager: LogicEngineManager,
     ...args: unknown[]
   ): void {
     this.runInitExtension.add({
       type: "after",
       fn,
-      args,
+      args: [engineManager, ...args],
     });
   }
 

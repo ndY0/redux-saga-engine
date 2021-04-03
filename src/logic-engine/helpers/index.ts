@@ -19,17 +19,17 @@ const register = (
 };
 
 const registerExtensionBefore = (
-  fn: (...args: unknown[]) => unknown,
+  fn: (engineManager: LogicEngineManager, ...args: unknown[]) => unknown,
   ...args: unknown[]
 ): void => {
-  logicEngineManager.registerExtensionBefore(fn, ...args);
+  logicEngineManager.registerExtensionBefore(fn, logicEngineManager, ...args);
 };
 
 const registerExtensionAfter = (
-  fn: (...args: unknown[]) => unknown,
+  fn: (engineManager: LogicEngineManager, ...args: unknown[]) => unknown,
   ...args: unknown[]
 ): void => {
-  logicEngineManager.registerExtensionAfter(fn, ...args);
+  logicEngineManager.registerExtensionAfter(fn, logicEngineManager, ...args);
 };
 
 const bootstrap = (...args: unknown[]): LogicEngineManager => {
