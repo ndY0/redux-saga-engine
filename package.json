@@ -1,6 +1,6 @@
 {
   "name": "redux-saga-react-engine",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "main": "lib/index.js",
   "module": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -14,7 +14,8 @@
     "hooks",
     "helpers",
     "adapters",
-    "connector"
+    "connector",
+    "manager"
   ],
   "repository": "https://github.com/ndY0/redux-saga-react-engine",
   "author": "Andy Crépin <andy1.crepin-prestataire@laposte.fr>",
