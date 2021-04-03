@@ -1,13 +1,27 @@
 {
   "name": "redux-saga-react-engine",
-  "version": "1.0.0",
-  "main": "src/index.ts",
+  "version": "0.1.1",
+  "main": "lib/index.js",
+  "module": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
     "build": "tsc"
   },
+  "exports": {
+    ".": "./lib/index.js",
+    "./effects": "./lib/logic-engine/effects/index.js",
+    "./hooks": "./lib/react-context/engine-hook/index.js",
+    "./helpers": "./lib/logic-engine/helpers/index.js",
+    "./adapters": "./lib/react-context/engine-connector/factories/index.js",
+    "./connector": "./lib/react-context/engine-connector/index.js"
+  },
+  "files": [
+    "lib/**/*.js",
+    "lib/**/*.d.ts"
+  ],
   "repository": "https://github.com/ndY0/redux-saga-react-engine",
   "author": "Andy Crépin <andy1.crepin-prestataire@laposte.fr>",
-  "license": "MIT",
+  "license": "GPL-2.0-or-later",
   "private": false,
   "devDependencies": {
     "@types/lodash.isequal": "^4.5.5",
